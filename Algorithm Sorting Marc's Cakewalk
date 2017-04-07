@@ -1,0 +1,14 @@
+#!/bin/python
+
+import sys
+
+
+n = int(raw_input().strip())
+calories = map(int, raw_input().strip().split(' '))
+# your code goes here
+calories.sort()
+calories.reverse()
+miles = 0
+for i in range(n):
+    miles += (2**i)*calories[i] 
+print miles
