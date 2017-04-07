@@ -1,0 +1,19 @@
+m, k = map(int, raw_input().split())
+ss = {}
+important = []
+not_important = []
+for i in range(m):
+    s = map(int, raw_input().split())
+    if s[1] == 1:
+        important.append(s[0])
+    else:
+        not_important.append(s[0])
+important.sort()
+#nega_list = []
+#print important
+if k < len(important):
+    nega_list = important[:(len(important)-k)]
+    #print nega_list
+    print sum(not_important) + sum(important[(len(important)-k):]) - sum(nega_list)
+else:
+    print sum(important) + sum(not_important)
