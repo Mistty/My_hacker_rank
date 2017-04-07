@@ -1,0 +1,14 @@
+#!/bin/python
+
+import sys
+
+
+n = int(raw_input().strip())
+a = map(int, raw_input().strip().split(' '))
+# your code goes here
+a.sort()
+s = []
+for i in range(n-1):
+    s.append(abs(a[i+1]-a[i]))
+s.sort()
+print s[0]
