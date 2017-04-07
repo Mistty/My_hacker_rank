@@ -1,0 +1,40 @@
+#!/bin/python
+
+import sys
+
+
+n1,n2,n3 = raw_input().strip().split(' ')
+n1,n2,n3 = [int(n1),int(n2),int(n3)]
+h1 = map(int,raw_input().strip().split(' '))
+h2 = map(int,raw_input().strip().split(' '))
+h3 = map(int,raw_input().strip().split(' '))
+
+h1.reverse()
+h2.reverse()
+h3.reverse()
+
+ph1 = []
+s1 = 0
+for i in range(n1):
+    s1 += h1[i]
+    ph1.append(s1)
+
+ph2 = []
+s2 = 0
+for i in range(n2):
+    s2 += h2[i]
+    ph2.append(s2)
+    
+ph3 = []
+s3 = 0
+for i in range(n3):
+    s3 += h3[i]
+    ph3.append(s3)
+
+ss = list(set(ph1).intersection(set(ph2)).intersection(set(ph3)))
+ss.sort()
+if len(ss) == 0:
+    print 0
+else:
+    print ss[-1]
+    
