@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+
 import java.util.*;
 
 class Student implements Comparable<Student>{
@@ -34,7 +40,7 @@ class Student implements Comparable<Student>{
 }
 
 //Complete the code
-public class Solution
+public class Java_Sort
 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
