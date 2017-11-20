@@ -1,10 +1,13 @@
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 import java.util.*;
 import java.io.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-class Solution {
+class Java_Hashset {
     public static void main(String[] argh) {
         Scanner s = new Scanner(System.in);
         int t = s.nextInt();
