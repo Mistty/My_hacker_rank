@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 import java.util.*;
 
-class Student implements Comparable<Student>{
+class Students implements Comparable<Students>{
     private int id;
     private String fname;
     private double cgpa;
-    public Student(int id, String fname, double cgpa) {
+    public Students(int id, String fname, double cgpa) {
         super();
         this.id = id;
         this.fname = fname;
@@ -26,7 +26,7 @@ class Student implements Comparable<Student>{
         return cgpa;
     }
     @Override
-    public int compareTo(Student st){
+    public int compareTo(Students st){
         if(this.getCgpa() == st.getCgpa()){
             return this.getFname().compareTo(st.getFname());
         }else{
@@ -46,13 +46,13 @@ public class Java_Sort
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
 
-        List<Student> studentList = new ArrayList<Student>();
+        List<Students> studentList = new ArrayList<Students>();
         while(testCases>0){
             int id = in.nextInt();
             String fname = in.next();
             double cgpa = in.nextDouble();
 
-            Student st = new Student(id, fname, cgpa);
+            Students st = new Students(id, fname, cgpa);
             studentList.add(st);
 
             testCases--;
@@ -60,7 +60,7 @@ public class Java_Sort
 
         Collections.sort(studentList);
 
-        for(Student st: studentList){
+        for(Students st: studentList){
             System.out.println(st.getFname());
         }
     }
