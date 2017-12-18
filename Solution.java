@@ -14,10 +14,15 @@ public class Solution {
                 arr[n][m] = in.nextInt();
             }
         }
-        System.out.print(arr);
-
         //System.out.print(arr);
-
+        int re = -999999999;
+        for(int i =0; i<4; i++){
+            for(int u = 0; u<4; u++){
+                int sum = arr[i][u] + arr[i][u+1] + arr[i][u+2] + arr[i+1][u+1] + arr[i+2][u] + arr[i+2][u+1] + arr[i+2][u+2];
+                re = sum>re?sum:re;
+            }
+        }
+        System.out.println(re);
 
     }
 }
